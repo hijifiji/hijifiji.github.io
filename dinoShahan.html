@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dino</title>
+</head>
+
+
+<body>
+    <img id="dino" src="dino.png" style="display:none">
+    <canvas id="canvas" width=1000 height=1000></canvas>
+
+</body>
+<script>
+    let canvas = document.getElementById("canvas");
+    let dino = document.getElementById("dino")
+    let ctx = canvas.getContext("2d");
+    let objects = [];
+    let lose = false;
+    const width = 1000;
+    let player = new Object(20, 400, 200, 200, "red", false);
+    player.vy = 0;
+
+    objects.push(new Object(width, 500, 100, 100, "blue", true));
+    objects.push(player);
+
+    function render() {//this draws everythin on to the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        objects.map(function (object, index) {
+
+            if (object.isEnemy == false) {
+                ctx.drawImage(dino, object.x, object.y, object.width, object.height)
+            }
+            else {
+                ctx.fillStyle = object.color;
+                ctx.fillRect(object.x, object.y, object.width, object.height)
+            }
+        }, this);
+    }
+
+    function updatePhysics() {
+
+        objects.map(function (object, index) {// all map does is loop through every element of the array
+
+            if (object == player) {// this is all for physics and having a smooth jump
+                player.y += player.vy;
+                if (player.y > 400) {
+                    player.y = 400;
+                }
+                if (player.vy < 0) {
+                    player.vy += 1;
+                }
+                if (player.vy >= 0 && player.y < 400) {
+                    player.vy = 3;
+                }
+
+                if (player.vy > 0) {
+                    player.vy -= 0.03;
+                }
+
+            }
+            if (object.isEnemy) {// this is for moving the enemy
+                object.x -= 5;
+                if (object.x <= -100) {
+                    object.x = 1000;
+                }
+            }
+
+
+            objects.map(function (object2, indexOfOther) {// this is to check if the objects are overlapping
+                if (indexOfOther != index) {// we dont check the same object
+                    if (object.x > object2.x && object.x < (object2.x + object2.width)) {
+                        if (object.y > object2.y && object.y < (object2.y + object2.height)) {
+                            console.log("SAME XXX")
+                            alert("YOU LOSE!! :-|");
+                            if (object != player) {
+                                object.x = width;
+                            }
+
+                        }
+                    }
+                }
+            }, this);
+        }, this);
+    }
+
+    function jump(event) {
+        event.preventDefault();
+        player.color = "red";
+        player.vy = -20;
+    }
+
+    document.addEventListener('keypress', jump);
+
+    setInterval(render, 10);
+    setInterval(updatePhysics, 10);
+    function Object(x, y, width, height, color, isEnemy) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+        this.isEnemy = isEnemy;
+    }
+
+
+
+
+</script>
+
+
+
+</html>
