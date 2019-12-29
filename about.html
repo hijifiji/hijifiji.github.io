@@ -1,0 +1,214 @@
+<!doctype html> 
+
+<html lang="en"> 
+
+<!-- Head --> 
+<head>  
+
+  <!-- Metadata -->
+  <title>Raconteur</title> 
+  <meta charset="utf-8">
+  <meta name="description" content="Web Project"> 
+  <meta name="author" content="Alex Zhang"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+  <!-- Links -->    
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="myscripts.js"></script> 
+    
+  <!-- Google Font -->    
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> <!-- font-family: 'Oswald', cursive; -->
+  <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet"> <!-- font-family: 'Long Cang', cursive; -->
+  <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet"> <!-- font-family: 'Mansalva', cursive; -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet"> <!-- font-family: 'Josefin Sans', sans-serif; -->
+    
+  <!-- Icon -->    
+  <link href="Pictures/Custom-Icon.png"  rel="icon">
+    
+  <!-- Style -->
+  <style>
+      body { 
+          background-color: #fff;
+          width: 100%;
+          height: 100%; 
+          min-width: 1100px;
+      }
+      h1 {
+          margin: 100px;
+          text-align: center;
+          font-size: 50px;
+          font-family: 'Josefin Sans', sans-serif;
+          letter-spacing: 7px;
+      }
+      h2 {
+          margin: 70px;
+          text-align: center;
+          font-size: 30px;
+          font-family: 'Josefin Sans', sans-serif;
+          min-width: 110px;
+      }
+      p {
+          font-size: 20px;
+          text-align: center;
+          font-family: 'Oswald', cursive;
+      }
+      #model {
+          width: 70%;
+          padding-top: 5px;
+          border-top: 5px dotted rgba(0,0,0,.5);
+          border-bottom: 5px dotted rgba(0,0,0,.5);
+          margin-left: 15%;
+          margin-right: 15%
+      }
+  </style>    
+    
+</head> 
+
+    
+    
+<!-- Body -->
+<body>  
+    
+    <!-- Content -->
+    <div id="content"> 
+        <div> 
+        <div class="banner"> 
+            <a href="https://journalismis.ca/" target="_blank"> 
+                <img src="Pictures/chicken-cyan.jpg" height="75px" class="logo"> 
+            </a> 
+            <p class="slogan">A louder voice</p> 
+        </div> 
+
+        <!-- Nav Bar -->    
+   
+        <div id="navbar">  
+            <nav role="navigation">
+            
+            <ul id="home">
+                <li><a href="index.html"><img src="Pictures/Custom-Logo-Cut.png" class="rac"></a></li>
+            </ul>
+                
+            <ul>
+                <li><a href="about.html" class="navlist">About</a>
+                    <ul>
+                        <li><a href="about.html#mis" class="navlist">Our Mission</a></li>
+                        <li><a href="about.html#mod" class="navlist">Our Model</a></li>
+                        <li><a href="about.html#loc" class="navlist">Our Reach</a></li>
+                    </ul>
+                </li>
+                <li><a href="issue.html" class="navlist">Issues</a>
+                    <ul>
+                        <li><a href="issue.html" class="navlist">Current Issue</a></li>
+                        <li><a href="issue.html" class="navlist">Past Issues  </a></li>
+                    </ul>
+                </li>
+                <li><a href="client.html" class="navlist">Clients</a>
+                </li>
+                <li><a href="contact.html" class="navlist">Contact Us</a>
+                    <ul>
+                        <li><a href="contact.html#admin" class="navlist">Admin</a></li>
+                        <li><a href="contact.html#staff" class="navlist">Staff</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </nav>
+            <!-- Script -->
+            <script>
+                window.onscroll = function() {navstick()};
+                    var navbar = document.getElementById("navbar");
+                    var sticky = navbar.offsetTop;
+                    function navstick() {
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky")
+                    } else {
+                        navbar.classList.remove("sticky");
+                        }
+                    }
+            </script>            
+        </div> 
+  
+
+        <!-- Tester -->
+            
+        <div>   
+            
+            <h1>About</h1>
+            
+            <p id="mis" style="bottom: 100px"></p>
+            <h2>- Our mission -</h2>
+            
+            <p>
+                Raconteur strives to bring you only the most up-to-date and factual information available. <br>
+                A society of free press and transparency is no longer an ideal. At Raconteur, it is reality. <br>
+                We publish weekly editions that cover a variety of topics such as poverty, social injustice, and homelessness. <br>
+                The goal of Raconteur is to bring these masked problems in society into the light. <br>
+            </p>
+            <br>
+            <p>
+                Raconteur is printed out weekly on Tuesdays. <br>
+                Our editorial board is very thorough in enforcing our journalistic standards and integrity. <br>      
+                Any inquiries or notices should be forwarded to our business email at: <br>
+                RcPress@vision.editorialboard.org <br>
+                
+            </p>
+            
+            <p id="mod" style="bottom: 40px"></p>
+            <h2>- Our Model -</h2>
+            
+            <img src="Pictures/Model.jpeg" id="model">
+            
+            <p id="loc" style="bottom: 40px"></p>
+            <h2>- Where We Operate -</h2>
+            
+            <p>
+                Our journalists come from all around the world. We operate in 31 countries. <br>
+                Our reporters currently operate from: <br> <br>
+                - Aland Islands -<br><br>
+                - Andorra -<br><br>
+                - Argentina -<br><br>
+                - Cameroon -<br><br>
+                - Canada -<br><br>
+                - China -<br><br>
+                - Costa Rica -<br><br>
+                - Denmark -<br><br>
+                - East Timor -<br><br>
+                - England -<br><br>
+                - Eritrea -<br><br>
+                - Fiji -<br><br>
+                - Haiti -<br><br>
+                - Hungary -<br><br>
+                - India -<br><br>
+                - Italy -<br><br>
+                - Ivory Coast -<br><br>
+                - Lithuania -<br><br>
+                - Morocco -<br><br>
+                - Myanmar -<br><br>
+                - Niue -<br><br>
+                - Portugal -<br><br>
+                - Romania -<br><br>
+                - Saint Lucia -<br><br>
+                - Samoa -<br><br>
+                - Sudan -<br><br>
+                - Sweden -<br><br>
+                - Tokelau -<br><br>
+                - United States -<br><br>
+                - Uruguay -<br><br>
+                - Vanuatu -
+            </p>
+            
+            
+            <p id="compliance"> 
+                Raconteur conforms and adheres to the standards and style of the Canadian Press. <br>
+                Raconteur is a member of the Quill & Scroll Society with International 1st Place Awards (1999, 2003, 2009-14, 2016-17) & George H. Gallup Awards (2000, 2001-02, 2004, 2005-06, 2018). <br> 
+                The editorial board makes all content decisions in coordination with advisors. <br>
+                <br>
+                The Raconteur Press © is a wing of the Vision Editorial Board : 1350 Golden Line Road, Almonte, ON, Canada, K0A1A0 <br>
+                Business Inqueries : 604.223.1997 / Other Inqueries : 604.235.1997 / Fax : RcPress@vision.editorialboard.org
+                </p>
+        </div> 
+
+    </div> 
+   
+    </div>
+    </body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html> 
+
+<html lang="en"> 
+
+<!-- Head --> 
+<head>  
+
+  <!-- Metadata -->
+  <title>Raconteur</title> 
+  <meta charset="utf-8">
+  <meta name="description" content="Web Project"> 
+  <meta name="author" content="Alex Zhang"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+  <!-- Links -->    
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="myscripts.js"></script> 
+    
+  <!-- Google Font -->    
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> <!-- font-family: 'Oswald', cursive; -->
+  <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet"> <!-- font-family: 'Long Cang', cursive; -->
+  <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet"> <!-- font-family: 'Mansalva', cursive; -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet"> <!-- font-family: 'Josefin Sans', sans-serif; -->
+    
+  <!-- Icon -->    
+  <link href="Pictures/Custom-Icon.png"  rel="icon">
+    
+  <!-- Style -->
+  <style>
+      body { 
+          background-color: #fff;
+          background-attachment: absolute;  
+          width: 100%;
+          height: 100%; 
+          min-width: 1100px;
+      }
+      .para2 {           
+        background-image: url("Pictures/tropic.jpeg");
+        height: 1000px; 
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+        background-image: url("Pictures/archipelago.jpeg");
+        /* Full height */
+        height: 1000px; 
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #compliance {
+          min-width: 1100px
+      } 
+      .spec {
+          font-size: 100px;
+          font-family: 'Long Cang', cursive;
+          text-align: center;
+          top: 70px
+      }
+      h1 {
+          font-size: 40px;
+          font-family: 'Josefin Sans', sans-serif;
+          text-align: center;
+          top: 50px
+      }
+      .contact {
+          text-align: center
+      }
+      p {
+          font-size: 30px;
+          font-family: 'Oswald', cursive;
+          top: 10px;
+      }
+  </style>    
+      
+</head> 
+
+    
+    
+<!-- Body -->
+<body>  
+    
+    <!-- Content -->
+    <div id="content">  
+        <div class="banner"> 
+            <a href="https://journalismis.ca/" target="_blank"> 
+                <img src="Pictures/chicken-cyan.jpg" height="75px" class="logo"> 
+            </a> 
+            <h6 class="slogan" style="font-size: 20px" style="font-size: 15px; text-emphasis: 100;">Our voices</h6> 
+        </div> 
+
+        <!-- Nav Bar -->    
+
+        <div id="navbar">  
+            <nav role="navigation">
+            
+            <ul id="home">
+                <li><a href="index.html"><img src="Pictures/Custom-Logo-Cut.png" class="rac"></a></li>
+            </ul>
+                
+            <ul>
+                <li><a href="about.html" class="navlist">About</a>
+                    <ul>
+                        <li><a href="about.html#mis" class="navlist">Our Mission</a></li>
+                        <li><a href="about.html#mod" class="navlist">Our Model</a></li>
+                        <li><a href="about.html#loc" class="navlist">Our Reach</a></li>
+                    </ul>
+                </li>
+                <li><a href="issue.html" class="navlist">Issues</a>
+                    <ul>
+                        <li><a href="issue.html" class="navlist">Current Issue</a></li>
+                        <li><a href="issue.html" class="navlist">Past Issues  </a></li>
+                    </ul>
+                </li>
+                <li><a href="client.html" class="navlist">Clients</a>
+                </li>
+                <li><a href="contact.html" class="navlist">Contact Us</a>
+                    <ul>
+                        <li><a href="contact.html#admin" class="navlist">Admin</a></li>
+                        <li><a href="contact.html#staff" class="navlist">Staff</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </nav>
+            <!-- Script -->
+            <script>
+                window.onscroll = function() {navstick()};
+                    var navbar = document.getElementById("navbar");
+                    var sticky = navbar.offsetTop;
+                    function navstick() {
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky");
+                        
+                    } else {
+                        navbar.classList.remove("sticky");
+                        }
+                    }
+                
+            </script>            
+        </div>
+        
+        <p id="admin" style="bottom: 80px;"></p>
+        <p style="height: 200px" class="spec">Administration</p>
+        <p class="contact">Vision Editorial Board : 1350 Golden Line Road, Almonte, ON, Canada, K0A1A0 <br>
+Business Inqueries : 604.223.1997 / Other Inqueries : 604.235.1997 / Fax : RcPress@vision.editorialboard.org</p>
+        <p class="line"></p>
+        
+         <div class="para2"></div>
+           
+        <p class="line" id="staff"></p>
+        
+        <h1>
+            <span style="font-family: 'Long Cang', cursive; font-size: 100px">The Staff</span>
+            <br>
+            <br>
+            <br>
+            - Jerimiah Wheeler - Head Editor -<br>
+            <p>JermimiahW@vision.editorialboard.org</p>
+            <br> <br>
+            - Dania Duffy - Editor -<br>
+            <p>DaniaD@vision.editorialboard.org</p>
+            <br> <br>
+            - Abdiel Keith - Editor -<br>
+            <p>AbdielK@vision.editorialboard.org</p>
+            <br> <br>
+            - Victor Anthony - Head Author -<br>
+            <p>VictorA@vision.writersboard.org</p>
+            <br> <br>
+            - Dustin Knapp - Contributor's Overseer -<br>
+            <p>DustinK@vision.board.org</p>
+            <br> <br>
+            - Nayeli Butler - Head Photographer -<br>
+            <p>NaveliB@vision.board.org</p>
+            <br> <br>
+            - Moises Jacobs - Lead Visual Consultant -<br>
+            <p>MoisesJ@vision.board.org</p>
+            <br> <br>
+            - Liam Huang - Head of Photography -<br>
+            <p>LiamH@vision.board.org</p>
+            <br> <br>
+            - Haiden Hughes - Company Manager -<br>
+            <p>HaidenH@vision.admin.org</p>
+            <br> <br>
+            - Kaylyn Floyd - Finance Manager -<br>
+            <p>KaylynF@vision.admin.org</p>
+            <br> <br>
+            - Kelsie Sheppard - Volunteer Coordinator -<br>
+            <p>KelsieS@vision.admin.org</p>
+            <br> <br>
+            - Kaylin Warren - Head Secretary -<br>
+            <p>KaylinW@vision.admin.org</p>
+            <br><br>
+        </h1>
+    <div class="c-wrap">
+        <p id="compliance"> 
+                Raconteur conforms and adheres to the standards and style of the Canadian Press. <br>
+                Raconteur is a member of the Quill & Scroll Society with International 1st Place Awards (1999, 2003, 2009-14, 2016-17) & George H. Gallup Awards (2000, 2001-02, 2004, 2005-06, 2018). <br> 
+                The editorial board makes all content decisions in coordination with advisors. <br>
+                <br>
+                The Raconteur Press © is a wing of the Vision Editorial Board : 1350 Golden Line Road, Almonte, ON, Canada, K0A1A0 <br>
+                Business Inqueries : 604.223.1997 / Other Inqueries : 604.235.1997 / Fax : RcPress@vision.editorialboard.org
+        </p>
+    </div>  
+    </div>
+    </body>
+</html>
